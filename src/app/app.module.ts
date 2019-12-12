@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { httpInterceptorProviders } from './http-interceptors';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CustomErrorHandlerComponent } from './custom-error-handler/custom-error-handler.component';
 
 // TODO Mock HTTP error
 // - Through unit tests?
@@ -12,7 +13,7 @@ import { AppComponent } from './app.component';
 // - Try re-providing at a module/component level
 // - Provide another token that the interceptor uses to handle errors
 @NgModule({
-    declarations: [AppComponent],
+    declarations: [AppComponent, CustomErrorHandlerComponent],
     imports: [BrowserModule, HttpClientModule, AppRoutingModule],
     providers: [httpInterceptorProviders],
     bootstrap: [AppComponent],

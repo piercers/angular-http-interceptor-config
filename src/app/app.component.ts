@@ -13,16 +13,16 @@ export class AppComponent {
 
     getTasks() {
         return this.httpClient
-            .get('https://jsonplaceholder.typicode.com/todos')
+            .get('https://jsonplaceholder.typicode.com/todos/1001')
             .subscribe(
                 (res) => {
-                    console.log(`getTasks response: `, res);
+                    console.log(`[AppComponent] getTasks response: `, res);
                 },
                 (error) => {
-                    console.log(`error getting tasks: `, error);
+                    console.log(`[AppComponent] getTasks error: `, error);
                 },
                 () => {
-                    console.log('done getTasks');
+                    console.log('[AppComponent] getTasks done');
                 },
             );
     }
